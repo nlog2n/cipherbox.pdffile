@@ -1,0 +1,92 @@
+处理中文
+
+默认是无法处理中文的，好dt……不过，终究是有方法的。网上很多iText处理中午的方法，大致分两类：
+
+    添加itextasian.jar包
+
+在iText5.0版本以后，包的目录结构发生改变，不能再使用以前的itextasion.jar包了。 网上有人发了一篇文章，说：只要修改目录itextasian.jar的目录，然后再重新生成jar包。
+这个方法，在最新的版本是不能用的。原因很简单，目录结构又变了……
+只要在sf上下载extrajars.zip包，里面有最新的itext-asian.jar包。添加上，就可以处理中文了！
+如果你的工程中，使用的是老的itextasian.jar包且无法更新，需要看一下加载文字配置文件的源码了。 
+
+
+/**
+ * 新建一个字体,iText的方法
+ * STSongStd-Light 是字体，在iTextAsian.jar 中以property为后缀
+ * UniGB-UCS2-H 是编码，在iTextAsian.jar 中以cmap为后缀
+ * H 代表文字版式是 横版， 相应的 V 代表 竖版
+ */
+BaseFont bfChinese = BaseFont.createFont("STSong-Light", "UniGB-UCS2-H", BaseFont.NOT_EMBEDDED);
+Font chineseFont = new Font(bfChinese, 12, Font.NORMAL); 进入`createFont`方法，在`BaseFont`类中，可以看到加载的具体流程：  
+
+public static BaseFont createFont(String name, String encoding, boolean embedded, 
+	boolean cached, byte ttfAfm[], byte pfb[], boolean noThrow, boolean forceRead) throws DocumentException, IOException {
+	String nameBase = getBaseName(name);
+    encoding = normalizeEncoding(encoding);
+    boolean isBuiltinFonts14 = BuiltinFonts14.containsKey(name);
+    boolean isCJKFont = isBuiltinFonts14 ? false : CJKFont.isCJKFont(nameBase, encoding);
+    ... ...  看到有`CJKFont.isCJKFont`方法，跟进去：
+
+public static boolean isCJKFont(String fontName, String enc) {
+    loadProperties();
+    if (!registryNames.containsKey("fonts"))
+        return false;
+    if (!registryNames.get("fonts").contains(fontName))
+        return false;
+    if (enc.equals(IDENTITY_H) || enc.equals(IDENTITY_V))
+        return true;
+    String registry = (String)allFonts.get(fontName).get("Registry");
+    Set<String> encodings = registryNames.get(registry);
+    return encodings != null && encodings.contains(enc);
+}
+
+CJKFont类里面的loadProperties()方法，调用了loadRegistry()方法：
+
+private static void loadRegistry() throws IOException {
+    InputStream is = getResourceStream(RESOURCE_PATH_CMAP + "cjk_registry.properties");
+    Properties p = new Properties();
+    p.load(is);
+    is.close();
+    for (Object key : p.keySet()) {
+        String value = p.getProperty((String)key);
+        String[] sp = value.split(" ");
+        Set<String> hs = new HashSet<String>();
+        for (String s : sp) {
+            if (s.length() > 0)
+                hs.add(s);
+        }
+        registryNames.put((String)key, hs);
+    }
+}
+
+哈，看到了吧！getResourceStream(RESOURCE_PATH_CMAP + "cjk_registry.properties")，就是这里。我的iText包是iText-pdf-5.3.5，可能和你的有差异。不过寻找路径的方法一样的！修改你的itextasian.jar包中的路径，相信可以成功的。
+如果可以更新，那还是更新一下吧，下面可以省去很多麻烦。
+
+
+
+
+    使用windows系统的自带字库字体
+
+Windows中一般都是使用TrueType字体，每个中文版Windows操作系统均默认安装了宋体、仿宋、黑体和楷体四种字体，你还可以安装其他第三方字体，如安装了Office 2000后，会自动安装华文行楷等字体，比较奇怪的是，在PDF文件中插入了一种本计算机才有的字体，在打开PDF文件的计算机上虽然没有该字体，但仍然能正常显示！这有别于Word文件，Word文件将当前计算机中没有的字体一律用宋体代替，这大概是意外收获吧。
+字体文件一般保存在windir\Fonts目录中，扩展名为TTF，还有扩展名为TTC的字体文件，也是TrueType字体，不过是一个集合，也就是里面有多种字体。下面列出windows2000简体中文版四种标准字体的文件名称：
+SIMSUN.TTC：宋体和新宋体
+SIMKAI.TTF：楷体
+SIMHEI.TTF：黑体
+SIMFANG.TTF：仿宋体
+
+按下面的方法写入黑体字文字，大小为32磅：
+
+BaseFont bfHei = BaseFont.createFont(@"c:\winnt\fonts\SIMHEI.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+Font font = new Font(bfHei, 32);
+String text = "这是黑体字测试！";
+document.Add(new Paragraph(text, font));
+
+不要管BaseFont.createFont方法第二、三个参数的意思，依葫芦画瓢就行了，第一个参数显示就是字体文件存放的位置。
+字体集合的使用同上面差不多，只是在在createFont方中要指定使用哪种字体。如：
+
+BaseFont bfSun=BaseFont.createFont(@"c:\winnt\fonts\SIMSUN.TTC,1", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+font = new Font(bfSun, 16);
+text = "这是字体集合中的新宋体测试！";
+document.Add(new Paragraph(text, font));
+
+不难看出，在使用BaseFont.createFont方法时，第一个参数@”c:\winnt\fonts\SIMSUN.TTC,1”中多了一个“,1”，表示使用序号为1字体，序号为0的字体为宋体。

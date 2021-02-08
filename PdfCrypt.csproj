@@ -1,0 +1,1171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PdfCrypt</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CipherBox.Pdf</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="iTextSharp\base\Anchor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Annotation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\BaseColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Chapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ChapterAutoNumber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Chunk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\Document.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\exceptions\DocumentException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\DocWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\exceptions\MessageLocalization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\exceptions\InvalidPdfException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\factories\GreekAlphabetFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\factories\RomanAlphabetFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\factories\RomanNumberFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\Font.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\FontFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\FontFactoryImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\GreekList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Header.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\IDocListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\IElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\IElementListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\IFontProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ILargeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ImgCCITT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ImgJBIG2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ImgRaw.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ImgTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ImgWMF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\IRtfElementInterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ISplitCharacter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ITextElementArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Jpeg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Jpeg2000.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\List.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\MarkedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\MarkedSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Meta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\PageSize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Paragraph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\AcroFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\exceptions\BadPasswordException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\exceptions\BadPdfFormatException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\Barcode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\Barcode128.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\Barcode39.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodeCodabar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodeDatamatrix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodeEAN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodeEANSUPP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodeInter25.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodePDF417.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodePostnet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\barcode\BarcodeQRCode.cs" />
+    <Compile Include="iTextSharp\pdf\BaseField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\BaseFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\BidiLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\BidiOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\ByteBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\CFFFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\CFFFontSubset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\CJKFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\CMapAwareDocumentFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\CMYKColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\BitFile.cs" />
+    <Compile Include="iTextSharp\pdf\codec\BmpImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\CCITTG4Encoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\GifImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\JBIG2Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\JBIG2SegmentReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\PngImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\PngWriter.cs" />
+    <Compile Include="iTextSharp\pdf\codec\TIFFConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\TIFFDirectory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\TIFFFaxDecoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\TIFFFaxDecompressor.cs" />
+    <Compile Include="iTextSharp\pdf\codec\TIFFField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\TiffImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\TIFFLZWDecoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\TiffWriter.cs" />
+    <Compile Include="iTextSharp\pdf\codec\wmf\InputMeta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\wmf\MetaBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\wmf\MetaDo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\wmf\MetaFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\wmf\MetaObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\wmf\MetaPen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\codec\wmf\MetaState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\collection\PdfCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\collection\PdfCollectionField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\collection\PdfCollectionItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\collection\PdfCollectionSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\collection\PdfCollectionSort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\collection\PdfTargetDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\ColorDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\ColumnText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\DefaultSplitCharacter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\DocumentFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\draw\DottedLineSeparator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\draw\IDrawInterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\draw\LineSeparator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\draw\VerticalPositionMark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\EnumerateTTC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\events\FieldPositioningEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\events\IndexEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\events\PdfPageEventForwarder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\events\PdfPCellEventForwarder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\events\PdfPTableEventForwarder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\ExtendedColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\FdfReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\FdfWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\FontDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\FontSelector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\GlyphList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\GrayColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\HyphenationAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\ByteVector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\CharVector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\Hyphen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\Hyphenation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\HyphenationTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\Hyphenator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\IPatternConsumer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\SimplePatternParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\hyphenation\TernaryTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\ICC_Profile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\IExtraEncoding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\IHyphenationEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\api\IPdfAnnotations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\api\IPdfDocumentActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\security\IPdfEncryptionSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\api\IPdfPageActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\api\IPdfRunDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\api\IPdfVersion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\api\IPdfViewerPreferences.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\api\IPdfXConformance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\intern\PdfAnnotationsImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\intern\PdfVersionImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\intern\PdfViewerPreferencesImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\intern\PdfXConformanceImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\IntHashtable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\IPdfOCG.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\IPdfPageEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\IPdfPCellEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\IPdfPTableEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\LZWDecoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\OutputStreamCounter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\security\OutputStreamEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PageResources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\ContentByteUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\FilteredRenderListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\FilteredTextRenderListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\GraphicsState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\IContentOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\ImageRenderInfo.cs" />
+    <Compile Include="iTextSharp\parser\IRenderListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\ITextExtractionStrategy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\LineSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\LocationTextExtractionStrategy.cs" />
+    <Compile Include="iTextSharp\parser\MarkedContentInfo.cs" />
+    <Compile Include="iTextSharp\parser\MarkedContentRenderFilter.cs" />
+    <Compile Include="iTextSharp\parser\Matrix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\watermark\OCGParser.cs" />
+    <Compile Include="iTextSharp\watermark\OCGRemover.cs" />
+    <Compile Include="iTextSharp\watermark\PdfOperator.cs" />
+    <Compile Include="iTextSharp\watermark\PdfContentReaderTool.cs" />
+    <Compile Include="iTextSharp\watermark\PdfWatermarkOption.cs" />
+    <Compile Include="PdfWaterMarker.cs" />
+    <Compile Include="iTextSharp\parser\PdfContentStreamProcessor.cs" />
+    <Compile Include="iTextSharp\parser\PdfImageObject.cs" />
+    <Compile Include="iTextSharp\parser\RegionTextRenderFilter.cs" />
+    <Compile Include="iTextSharp\parser\RenderFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\SimpleTextExtractionStrategy.cs" />
+    <Compile Include="iTextSharp\parser\TaggedPdfReaderTool.cs" />
+    <Compile Include="iTextSharp\parser\TextMarginFinder.cs" />
+    <Compile Include="iTextSharp\parser\TextRenderInfo.cs" />
+    <Compile Include="iTextSharp\parser\Vector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\IXObjectDoHandler.cs" />
+    <Compile Include="iTextSharp\pdf\PatternColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfAcroForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfAnnotation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfAppearance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfBorderArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfBorderDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfChunk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfContentByte.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\PdfContentParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfContents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfCopy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\PdfCopyFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfCopyFieldsImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\PdfCopyForms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfCopyFormsImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfDashPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfDate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfDestination.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfDeveloperExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\PdfDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfEFStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfEncodings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\security\PdfEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\exceptions\PdfException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfFileSpecification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\PdfFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfFormField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfFormXObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfGState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfICCBased.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfImportedPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfIndirectObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfIndirectReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfLayerMembership.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfLiteral.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfMediaClipData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfNameTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfNull.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfNumber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfNumberTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfOCProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfOutline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPageEventHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPageLabels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPatternPainter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPCell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPSXObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfPTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\PdfReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\PdfReaderInstance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfRectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfRendition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfResources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfShading.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfShadingPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfSignature.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfSmartCopy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfSpotColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\PdfStamper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\core\PdfStamperImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfStructureElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfStructureTreeRoot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfTextArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfTransition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfTransparencyGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PdfVisibilityExpression.cs" />
+    <Compile Include="iTextSharp\core\PdfWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\exceptions\PdfXConformanceException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\Pfm2afm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PRAcroForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PRIndirectReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PRStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\parser\PRTokeniser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\PushbuttonField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\qrcode\BitArray.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\BitMatrix.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\BitVector.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\BlockPair.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\ByteArray.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\ByteMatrix.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\CharacterSetECI.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\EncodeHintType.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\Encoder.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\ErrorCorrectionLevel.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\FormatInformation.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\GF256.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\GF256Poly.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\MaskUtil.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\MatrixUtil.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\Mode.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\QRCode.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\QRCodeWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\qrcode\ReedSolomonEncoder.cs" />
+    <Compile Include="iTextSharp\pdf\qrcode\Version.cs" />
+    <Compile Include="iTextSharp\exceptions\WriterException.cs" />
+    <Compile Include="iTextSharp\pdf\RadioCheckField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\RandomAccessFileOrArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\SequenceList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\ShadingColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\SimpleBookmark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\SimpleNamedDestination.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\SpotColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\StampContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\security\StandardDecryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\TextField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\TrueTypeFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\TrueTypeFontSubSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\TrueTypeFontUnicode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\Type1Font.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\Type3Font.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\fonts\Type3Glyph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\VerticalText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\XfaForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\pdf\XfdfReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Phrase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Rectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\RectangleReadOnly.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\RomanList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Section.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\SpecialSymbol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\Utilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\ParserBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\simpleparser\EntitiesToSymbol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\simpleparser\EntitiesToUnicode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\simpleparser\IanaEncodings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\simpleparser\ISimpleXMLDocHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\simpleparser\ISimpleXMLDocHandlerComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\simpleparser\SimpleXMLParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\DublinCoreSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\EncodingNoPreamble.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\LangAlt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\PdfSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\XmpArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\XmpBasicSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\XmpMMSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\XmpReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\XmpSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\xml\xmp\XmpWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ZapfDingbatsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iTextSharp\base\ZapfDingbatsNumberList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PdfLocker.cs" />
+    <EmbeddedResource Include="Resources\en.lng" />
+    <EmbeddedResource Include="Resources\Courier-Bold.afm" />
+    <EmbeddedResource Include="Resources\Courier-BoldOblique.afm" />
+    <EmbeddedResource Include="Resources\Courier-Oblique.afm" />
+    <EmbeddedResource Include="Resources\Courier.afm" />
+    <EmbeddedResource Include="Resources\glyphlist.txt" />
+    <EmbeddedResource Include="Resources\Helvetica-Bold.afm" />
+    <EmbeddedResource Include="Resources\Helvetica-BoldOblique.afm" />
+    <EmbeddedResource Include="Resources\Helvetica-Oblique.afm" />
+    <EmbeddedResource Include="Resources\Helvetica.afm" />
+    <EmbeddedResource Include="Resources\Symbol.afm" />
+    <EmbeddedResource Include="Resources\Times-Bold.afm" />
+    <EmbeddedResource Include="Resources\Times-BoldItalic.afm" />
+    <EmbeddedResource Include="Resources\Times-Italic.afm" />
+    <EmbeddedResource Include="Resources\Times-Roman.afm" />
+    <EmbeddedResource Include="Resources\ZapfDingbats.afm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="iTextSharp\api\IIndentable.cs" />
+    <Compile Include="iTextSharp\api\ISpaceable.cs" />
+    <Compile Include="iTextSharp\api\IWriterOperation.cs" />
+    <Compile Include="iTextSharp\exceptions\InvalidImageException.cs" />
+    <Compile Include="iTextSharp\io\ArrayRandomAccessSource.cs" />
+    <Compile Include="iTextSharp\io\GroupedRandomAccessSource.cs" />
+    <Compile Include="iTextSharp\io\IndependentRandomAccessSource.cs" />
+    <Compile Include="iTextSharp\io\IRandomAccessSource.cs" />
+    <Compile Include="iTextSharp\io\RAFRandomAccessSource.cs" />
+    <Compile Include="iTextSharp\io\RandomAccessSourceFactory.cs" />
+    <Compile Include="iTextSharp\io\RASInputStream.cs" />
+    <Compile Include="iTextSharp\io\StreamUtil.cs" />
+    <Compile Include="iTextSharp\io\WindowRandomAccessSource.cs" />
+    <Compile Include="iTextSharp\base\ListBody.cs" />
+    <Compile Include="iTextSharp\base\ListLabel.cs" />
+    <Compile Include="iTextSharp\pdf\codec\LZWCompressor.cs" />
+    <Compile Include="iTextSharp\pdf\codec\LZWStringTable.cs" />
+    <Compile Include="iTextSharp\pdf\CompareTool.cs" />
+    <Compile Include="iTextSharp\pdf\FloatLayout.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\AbstractCMap.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CidLocationFromByte.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CidResource.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapByteCid.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapCache.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapCidByte.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapCidUni.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapParserEx.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapSequence.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapToUnicode.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\CMapUniCid.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\ICidLocation.cs" />
+    <Compile Include="iTextSharp\fonts\cmaps\IdentityToUnicode.cs" />
+    <Compile Include="iTextSharp\api\IAccessibleElement.cs" />
+    <Compile Include="iTextSharp\api\IPdfIsoConformance.cs" />
+    <Compile Include="iTextSharp\api\IPdfStructureElement.cs" />
+    <Compile Include="iTextSharp\pdf\intern\PdfIsoKeys.cs" />
+    <Compile Include="iTextSharp\pdf\languages\ArabicLigaturizer.cs" />
+    <Compile Include="iTextSharp\pdf\languages\DevanagariLigaturizer.cs" />
+    <Compile Include="iTextSharp\pdf\languages\GujaratiLigaturizer.cs" />
+    <Compile Include="iTextSharp\pdf\languages\HebrewProcessor.cs" />
+    <Compile Include="iTextSharp\pdf\languages\ILanguageProcessor.cs" />
+    <Compile Include="iTextSharp\pdf\languages\IndicLigaturizer.cs" />
+    <Compile Include="iTextSharp\pdf\LongHashtable.cs" />
+    <Compile Include="iTextSharp\pdf\FilterHandlers.cs" />
+    <Compile Include="iTextSharp\pdf\NumberArray.cs" />
+    <Compile Include="iTextSharp\parser\InlineImageInfo.cs" />
+    <Compile Include="iTextSharp\parser\InlineImageUtils.cs" />
+    <Compile Include="iTextSharp\pdf\IPdfPTableEventSplit.cs" />
+    <Compile Include="iTextSharp\pdf\PdfArtifact.cs" />
+    <Compile Include="iTextSharp\pdf\PdfConcatenate.cs" />
+    <Compile Include="iTextSharp\pdf\PdfDiv.cs" />
+    <Compile Include="iTextSharp\exceptions\PdfIsoConformanceException.cs" />
+    <Compile Include="iTextSharp\pdf\PdfPHeaderCell.cs" />
+    <Compile Include="iTextSharp\pdf\PdfPTableBody.cs" />
+    <Compile Include="iTextSharp\pdf\PdfPTableFooter.cs" />
+    <Compile Include="iTextSharp\pdf\PdfPTableHeader.cs" />
+    <Compile Include="iTextSharp\pdf\PdfSigLockDictionary.cs" />
+    <Compile Include="iTextSharp\pdf\PdfStructTreeController.cs" />
+    <Compile Include="iTextSharp\fonts\TtfUnicodeWriter.cs" />
+    <Compile Include="iTextSharp\base\TabSettings.cs" />
+    <Compile Include="iTextSharp\base\TabSplitCharacter.cs" />
+    <Compile Include="iTextSharp\base\TabStop.cs" />
+    <Compile Include="iTextSharp\base\Version.cs" />
+    <Compile Include="iTextSharp\base\WritableDirectElement.cs" />
+    <Compile Include="iTextSharp\xml\simpleparser\handler\HTMLNewLineHandler.cs" />
+    <Compile Include="iTextSharp\xml\simpleparser\handler\NeverNewLineHandler.cs" />
+    <Compile Include="iTextSharp\xml\simpleparser\INewLineHandler.cs" />
+    <Compile Include="iTextSharp\xml\XmlDomWriter.cs" />
+    <Compile Include="iTextSharp\xml\XmlToTxt.cs" />
+    <Compile Include="iTextSharp\xml\XMLUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CryptLib\CryptLib.csproj">
+      <Project>{27C90441-2336-4C6B-BD7C-00CCDC437D31}</Project>
+      <Name>CryptLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="PdfUtil\PdfUtil.csproj">
+      <Project>{63EEF705-4F81-4725-97FB-B04B826A06CA}</Project>
+      <Name>PdfUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cmaps\cjk_registry.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cmaps\STSong-Light.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cmaps\UniGB-UTF16-H" />
+    <EmbeddedResource Include="Resources\cmaps\UniGB-UTF16-V" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
